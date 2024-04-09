@@ -16,86 +16,86 @@
 # under the License.
 
 output "vm_server_instance_id" {
-  value = [for vm in aws_instance.standalone_server : vm.id]
+  value       = [for vm in aws_instance.standalone_server : vm.id]
   description = "Instance IDs of standalone instances"
 }
 output "vm_server_instance_private_ip" {
-  value = [for vm in aws_instance.standalone_server : vm.private_ip]
+  value       = [for vm in aws_instance.standalone_server : vm.private_ip]
   description = "Private IPs of standalone instances"
 }
 output "vm_server_instance_public_dns" {
-  value = [for vm in aws_instance.standalone_server : vm.public_dns]
+  value       = [for vm in aws_instance.standalone_server : vm.public_dns]
   description = "Public domain names of standalone instances"
 }
 output "vm_server_instance_public_ip" {
-  value = [for vm in aws_instance.standalone_server : vm.public_ip]
+  value       = [for vm in aws_instance.standalone_server : vm.public_ip]
   description = "Public IPs of standalone instances"
 }
 
 output "master_server_instance_id" {
-  value = [for vm in aws_instance.master : vm.id]
+  value       = [for vm in aws_instance.master : vm.id]
   description = "Instance IDs of master instances"
 }
 output "master_server_instance_private_ip" {
-  value = [for vm in aws_instance.master : vm.private_ip]
+  value       = [for vm in aws_instance.master : vm.private_ip]
   description = "Private IPs of master instances"
 }
 output "master_server_instance_public_dns" {
-  value = [for vm in aws_instance.master : vm.public_dns]
+  value       = [for vm in aws_instance.master : vm.public_dns]
   description = "Public domain names of master instances"
 }
 output "master_server_instance_public_ip" {
-  value = [for vm in aws_instance.master : vm.public_ip]
+  value       = [for vm in aws_instance.master : vm.public_ip]
   description = "Public IPs of master instances"
 }
 
 output "worker_server_instance_id" {
-  value = [for vm in aws_instance.worker : vm.id]
+  value       = [for vm in aws_instance.worker : vm.id]
   description = "Instance IDs of worker instances"
 }
 output "worker_server_instance_private_ip" {
-  value = [for vm in aws_instance.worker : vm.private_ip]
+  value       = [for vm in aws_instance.worker : vm.private_ip]
   description = "Private IPs of worker instances"
 }
 output "worker_server_instance_public_dns" {
-  value = [for vm in aws_instance.worker : vm.public_dns]
+  value       = [for vm in aws_instance.worker : vm.public_dns]
   description = "Public domain names of worker instances"
 }
 output "worker_server_instance_public_ip" {
-  value = [for vm in aws_instance.worker : vm.public_ip]
+  value       = [for vm in aws_instance.worker : vm.public_ip]
   description = "Public IPs of worker instances"
 }
 
 output "api_server_instance_id" {
-  value = [for vm in aws_instance.api : vm.id]
+  value       = [for vm in aws_instance.api : vm.id]
   description = "Instance IDs of api instances"
 }
 output "api_server_instance_private_ip" {
-  value = [for vm in aws_instance.api : vm.private_ip]
+  value       = [for vm in aws_instance.api : vm.private_ip]
   description = "Private IPs of api instances"
 }
 output "api_server_instance_public_dns" {
-  value = [for vm in aws_instance.api : vm.public_dns]
+  value       = [for vm in aws_instance.api : vm.public_dns]
   description = "Public domain names of api instances"
 }
 output "api_server_instance_public_ip" {
-  value = [for vm in aws_instance.api : vm.public_ip]
+  value       = [for vm in aws_instance.api : vm.public_ip]
   description = "Public IPs of api instances"
 }
 
 output "alert_server_instance_id" {
-  value = [for vm in aws_instance.alert : vm.id]
+  value       = [for vm in aws_instance.alert : vm.id]
   description = "Instance IDs of alert instances"
 }
 output "alert_server_instance_private_ip" {
-  value = [for vm in aws_instance.alert : vm.private_ip]
+  value       = [for vm in aws_instance.alert : vm.private_ip]
   description = "Private IPs of alert instances"
 }
 output "alert_server_instance_public_dns" {
-  value = [for vm in aws_instance.alert : vm.public_dns]
+  value       = [for vm in aws_instance.alert : vm.public_dns]
   description = "Public domain names of alert instances"
 }
 output "alert_server_instance_public_ip" {
-  value = [for vm in aws_instance.alert : vm.public_ip]
+  value       = [for vm in aws_instance.alert : vm.public_ip]
   description = "Public IPs of alert instances"
 }

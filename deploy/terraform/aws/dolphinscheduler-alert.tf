@@ -101,4 +101,7 @@ resource "aws_instance" "alert" {
   tags = merge(var.tags, {
     "Name" = "${var.name_prefix}-alert-${count.index}"
   })
+  disable_api_termination = true
+  monitoring              = true
+  tenancy                 = "dedicated"
 }
