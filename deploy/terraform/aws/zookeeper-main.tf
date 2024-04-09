@@ -111,4 +111,7 @@ resource "aws_instance" "zookeeper" {
   tags = merge(var.tags, {
     "Name" = "${var.name_prefix}-zookeeper-${count.index}"
   })
+  disable_api_termination = true
+  monitoring              = true
+  tenancy                 = "dedicated"
 }
