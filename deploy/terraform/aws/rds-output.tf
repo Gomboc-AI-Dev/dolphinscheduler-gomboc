@@ -16,16 +16,16 @@
 # under the License.
 
 output "db_address" {
-  value = aws_db_instance.database.address
+  value       = aws_db_instance.database.address
   description = "Database address"
 }
 
 output "db_port" {
-  value = aws_db_instance.database.port
+  value       = aws_db_instance.database.port
   description = "Database port"
 }
 
 output "db_name" {
-  value = aws_db_instance.database.db_name
+  value       = aws_db_instance.database.db_name
   description = "Database name"
 }

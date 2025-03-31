@@ -39,16 +39,19 @@ resource "aws_db_subnet_group" "database_subnet_group" {
 }
 
 resource "aws_db_instance" "database" {
-  identifier             = "dolphinscheduler"
-  db_name                = "dolphinscheduler"
-  instance_class         = var.db_instance_class
-  allocated_storage      = 5
-  engine                 = "postgres"
-  engine_version         = "14.5"
-  skip_final_snapshot    = true
-  db_subnet_group_name   = aws_db_subnet_group.database_subnet_group.id
-  publicly_accessible    = true
-  vpc_security_group_ids = [aws_security_group.database_sg.id]
-  username               = var.db_username
-  password               = var.db_password
+  identifier                          = "dolphinscheduler"
+  db_name                             = "dolphinscheduler"
+  instance_class                      = var.db_instance_class
+  allocated_storage                   = 5
+  engine                              = "postgres"
+  engine_version                      = "14.5"
+  skip_final_snapshot                 = true
+  db_subnet_group_name                = aws_db_subnet_group.database_subnet_group.id
+  publicly_accessible                 = false
+  vpc_security_group_ids              = [aws_security_group.database_sg.id]
+  username                            = var.db_username
+  password                            = var.db_password
+  multi_az                            = true
+  deletion_protection                 = true
+  iam_database_authentication_enabled = true
 }
