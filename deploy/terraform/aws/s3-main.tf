@@ -23,9 +23,10 @@ module "s3_bucket" {
   acl                      = "private"
   control_object_ownership = true
   object_ownership         = "ObjectWriter"
-  force_destroy            = true
+  force_destroy            = false
   attach_policy            = true
   policy                   = data.aws_iam_policy_document.s3.json
+  versioning               = "{enabled=true}"
 }
 
 resource "aws_iam_user" "s3" {

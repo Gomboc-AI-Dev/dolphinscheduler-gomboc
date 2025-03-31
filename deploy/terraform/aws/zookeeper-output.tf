@@ -16,18 +16,18 @@
 # under the License.
 
 output "zookeeper_server_instance_id" {
-  value = [for vm in aws_instance.zookeeper : vm.id]
+  value       = [for vm in aws_instance.zookeeper : vm.id]
   description = "Instance IDs of zookeeper instances"
 }
 output "zookeeper_server_instance_private_ip" {
-  value = [for vm in aws_instance.zookeeper : vm.private_ip]
+  value       = [for vm in aws_instance.zookeeper : vm.private_ip]
   description = "Private IPs of zookeeper instances"
 }
 output "zookeeper_server_instance_public_dns" {
-  value = [for vm in aws_instance.zookeeper : vm.public_dns]
+  value       = [for vm in aws_instance.zookeeper : vm.public_dns]
   description = "Public domain names of zookeeper instances"
 }
 output "zookeeper_server_instance_public_ip" {
-  value = [for vm in aws_instance.zookeeper : vm.public_ip]
+  value       = [for vm in aws_instance.zookeeper : vm.public_ip]
   description = "Public IPs of zookeeper instances"
 }
