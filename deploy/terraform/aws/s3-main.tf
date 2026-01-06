@@ -16,8 +16,8 @@
 # under the License.
 
 module "s3_bucket" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "~> 3.6"
+  source  = "git@github.com:Gomboc-AI-Dev/terraform-aws-s3-bucket.git?ref=3170c8beeb346b53c10a3ac2164e637ed161f828"
+  # version = "~> 3.6"
 
   bucket_prefix            = var.s3_bucket_prefix
   acl                      = "private"
